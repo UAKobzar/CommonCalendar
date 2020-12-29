@@ -22,11 +22,11 @@ namespace CommonCalendar.Calendar.Application.Services
             _bus = bus;
         }
 
-        public void CreateCalendarEvent(CalendarEventDTO calendarEvent)
+        public async void CreateCalendarEvent(CalendarEventDTO calendarEvent)
         {
             var createCalendarEventCommand = new CreateCalendarEventCommand(calendarEvent.Description);
 
-            _bus.SendCommand(createCalendarEventCommand);
+           await _bus.SendCommand(createCalendarEventCommand);
         }
 
         public IEnumerable<CalendarEvent> GetCalendarEvents()

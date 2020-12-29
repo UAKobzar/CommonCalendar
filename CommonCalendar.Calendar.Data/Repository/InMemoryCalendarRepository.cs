@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CommonCalendar.Calendar.Data.Repository
 {
-    class InMemoryCalendarRepository : ICalendarRepository
+    public class InMemoryCalendarRepository : ICalendarRepository
     {
         private List<CalendarEvent> _events;
 
